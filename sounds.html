@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relaxation Sounds</title>
+   <link rel="stylesheet" href="css/sound.css">
+
+</head>
+<body>
+    <header>
+        <h1>Relaxation Sounds</h1>
+        <a href="index.html">Back Home</a>
+    </header>
+
+    <main>
+    <h2 id="nowPlaying">🎵 Choose a relaxing sound</h2>
+
+    <div class="controls">
+        <button onclick="playSound('rain')">🌧 Rain</button>
+        <button onclick="playSound('ocean')">🌊 Ocean</button>
+        <button onclick="playSound('forest')">🌲 Forest</button>
+        <button onclick="stopSound()">⏹ Stop</button>
+    </div>
+
+    <div class="volume-box">
+        <label for="volume">🔊 Volume</label>
+        <input type="range" id="volume" min="0" max="1" step="0.01" value="0.5">
+    </div>
+
+    <audio id="rain" src="sounds/flute-music-with-rain-ambiance-370521.mp3" loop></audio>
+    <audio id="ocean" src="sounds/piano-ocean-ballad-297727.mp3" loop></audio>
+    <audio id="forest" src="sounds/birds39-forest-20772.mp3" loop></audio>
+</main>
+
+
+    <script src="js/sounds.js"></script>
+</body>
+</html>

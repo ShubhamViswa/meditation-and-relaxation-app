@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calm Mind - Meditation & Relaxation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <audio id="bgMusic" src="sounds/meditation-relaxing-music-462869.mp3" loop autoplay></audio>
+
+    <header>
+        <h1>🧘 Calm Mind</h1>
+        <p>Relax, meditate, and rejuvenate your soul</p>
+        <nav>
+            <a href="meditation.html">Start Meditation</a>
+            <a href="sounds.html">Relaxation Sounds</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="tips-section glass">
+            <h2>Meditation Tip of the Day</h2>
+            <p id="tip"></p>
+            <button onclick="generateTip()">New Tip</button>
+        </section>
+
+        <section class="music-control glass">
+            <h2>Background Music</h2>
+            <button onclick="toggleMusic()">Play / Pause</button>
+        </section>
+    </main>
+
+    <script src="js/tips.js"></script>
+    <script>
+        const bgMusic = document.getElementById("bgMusic");
+        function toggleMusic() {
+            if(bgMusic.paused) bgMusic.play();
+            else bgMusic.pause();
+        }
+    </script>
+</body>
+</html>
